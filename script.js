@@ -332,8 +332,8 @@ let questions = [
   {
     sporsmal:
       "Hvilket tall på heksadesimal form tilsvarer det desimale tallet 78",
-    svar: "414",
-    alt: ["BC", "4E", "A5"],
+    svar: "4E",
+    alt: ["BC", "414", "A5"],
   },
 
   {
