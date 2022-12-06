@@ -6,12 +6,37 @@ let total_answered = 0;
 let total_correct = 0;
 
 let questions = [
-  //   {
-  //     sporsmal: "Hva vil printes her?",
-  //     svar: "3",
-  //     alt: ["1", "2", "4"],
-  //   },
   {
+    type: "forstoelse",
+    index: 1,
+    sporsmal: "Hva vil printes her?",
+    svar: "3",
+    alt: ["1", "2", "4"],
+  },
+  {
+    type: "forstoelse",
+    index: 2,
+    sporsmal: "Hva vil printes her?",
+    svar: "76",
+    alt: ["100", "-24", "124"],
+  },
+  {
+    type: "forstoelse",
+    index: 3,
+    sporsmal: "Hva vil printes her?",
+    svar: "[-1, 0, 5]",
+    alt: ["[0, 0, 5]", "[1, 1, 5]", "[2, 4, 5]"],
+  },
+  {
+    type: "forstoelse",
+    index: 4,
+    sporsmal: "Hva vil printes her?",
+    svar: "[2, 0, 1, 0]",
+    alt: ["[2, 2, 1, 2]", "[2, 1, 0, 0]", "[2, 1, 2, 2]"],
+  },
+
+  {
+    type: "vanlig",
     sporsmal: "Hva er Alan Turing kjent for?",
     svar: "Han utformet det matematiske grunnlaget for dagens datamaskiner.",
     alt: [
@@ -22,6 +47,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Hva kalles mindre kretskort som plugges inn i hoved(krets-)kortet?",
     svar: "Datterkort",
@@ -29,12 +55,14 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva stør CPU for?",
     svar: "Central Processing Unit",
     alt: ["Central Power Unit", "Cooling Power Unit", "Core Processing Unitr"],
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "RAM står for random acces memory, men hva menes egentlig med random i dette tilfellet?",
     svar: "At hukommelsescellene kan aksesseres direkte i tilfeldig rekkefølge.",
@@ -46,6 +74,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Hvilket metall finner man inni CPUer som IT-industrien er fullstendig avhengig av?",
     svar: "Silisium",
@@ -53,6 +82,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Hva kunne en CPU gjøre som var helt revolusjonerende når den kom?",
     svar: "Utføre operasjoner lagret i minnet.",
@@ -64,6 +94,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva sier Moores lov?",
     svar: "Loven sier at antall transistorer i en integrert krets dobles hvert andre år.",
     alt: [
@@ -74,6 +105,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er fotolitografi?",
     svar: "En teknikk for å lage transistorer i en integrert krets",
     alt: [
@@ -84,6 +116,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er software?",
     svar: "Instruksjoner lagret i en datamaskins minne",
     alt: [
@@ -94,6 +127,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Hva er det som benyttes i dag som har erstattet vacuum tubes (vakumrør)?",
     svar: "Transistorer",
@@ -101,6 +135,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva betyr begrepet binært ('binary') bokstavelig?",
     svar: "Av to tilstander ('of two states')",
     alt: [
@@ -111,30 +146,35 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Binær tilstanden 0 kan også representere",
     svar: "Ikke flyt av strøm",
     alt: ["Flyt av strøm", "False", "True"],
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva blir binærtallet 1101 i titallssystemet?",
     svar: "13",
     alt: ["11", "7", "3"],
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er 183 (titallssystemet) i binær?",
     svar: "10101111",
     alt: ["10110111", "110110111", "11010111"],
   },
 
   {
+    type: "vanlig",
     sporsmal: "En byte er ___ bit",
     svar: "8",
     alt: ["1", "4", "16"],
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva kjennetegner en 16bits datamaskin/spillkonsoll?",
     svar: "Minnet kan addresseres med 16 bits.",
     alt: [
@@ -145,12 +185,14 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hvilket er størst?",
     svar: "Terabyte",
     alt: ["Gigabyte", "Kilobyte", "Megabyte"],
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Hva er en vanlig måte datamaskiner representer positive og negative tall på",
     svar: "Første bit er 1 for negative tall og 0 for positive tall.",
@@ -162,6 +204,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Hvorfor kan det være nødvendig å bruke 64bit til å representere heltall i stedet for 32bits?",
     svar: "Trenger 64bit til å addressere minne på nyere datamaskiner.",
@@ -173,6 +216,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Hvordan representeres et flyt/desimaltall med 32 bit iht. IEEE 754 standarden?",
     svar: "23 bit for signifikanten",
@@ -184,18 +228,21 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hvor mange symboler kan representeres med 3 byte?",
     svar: "16 777 216",
     alt: ["8", "9", "3"],
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hvor mange symboler kan representeres med 6 bit?",
     svar: "64",
     alt: ["36", "60", "6"],
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Hvor mange bytes trenger man for å representere et fullt HD-bilde (1920x1080px) i svart/hvit?",
     svar: "259 200 bytes",
@@ -203,6 +250,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Hvilket tall på desimalform representerer det heksadesimale tallet 'BC3'?",
     svar: "3011",
@@ -210,6 +258,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva står ADC for?",
     svar: "Analog-to-Digital Converter",
     alt: [
@@ -220,6 +269,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er en piksel?",
     svar: "Den minste enheten i et bilde",
     alt: [
@@ -230,6 +280,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er sampling?",
     svar: "å konvertere fra analog til digital lyd",
     alt: [
@@ -240,6 +291,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er riktig om Nyquist-regelen for sampling?",
 
     svar: "Nyquist-regelen sier at samplingsfrekvensen må være minst dobbelt så rask som den raskeste frekvensen. Ettersom menneskelige ører kan høre lyder opp til ca. 20 000Hz, vil samplingsfrekvens på 40 000Hz oppfylle Nyquists regel for digitale lydopptak.",
@@ -251,6 +303,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er tetthet (density)?",
     svar: "Antall piksler per fysisk areal",
     alt: [
@@ -261,6 +314,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er  sant om UNICODE?",
     svar: "Etablert i 1992",
     alt: [
@@ -271,12 +325,14 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Gjør om det binøre flyttallet 1101.1011 til desimaltall",
     svar: "13.11",
     alt: ["13.6875", "9.2022", "13.8525"],
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er koding (encoding) av video?",
     svar: "Transformasjon av video slik at den kan deles og spilles av",
     alt: [
@@ -287,6 +343,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Et bilde 10 x 10 tommer bilde er skannet til 326 piksler per tomme.Hver piksel er representert ved en RGB-verdi. Hvor stor lagringsplass krever dette bildet?",
     svar: "4.00 MB",
@@ -294,6 +351,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er rammestørrelse (frame size) i en digital video?",
     svar: "Måles i antall cm bredde x antall cm høyde",
     alt: [
@@ -304,6 +362,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er riktig om JPG komprimering?",
     svar: "JPG komprimerer med tap ved å lage forenklinger som ikke er så synlig for menneske",
     alt: [
@@ -314,6 +373,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Hvorfor er det behov for bildekomprimering? (Kan være flere riktige)",
     svar: "Krymper fysisk bits i minnet (RAM), slik at det blir plass til mer",
@@ -325,6 +385,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er sant om lossy komprimering (lossy compression) av data?",
     svar: "Fjerning av informasjon som er vanskelig for mennesker å oppdage",
     alt: [
@@ -335,6 +396,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Hvilket tall på heksadesimal form tilsvarer det desimale tallet 78",
     svar: "4E",
@@ -342,6 +404,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Tapsfri komprimering (lossless compression) gjør at komprimert data ...",
     svar: "... ikke gir tap av opprinnelig data",
@@ -353,6 +416,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er sant?",
     svar: "Forsinkelse (latency) er tiden det tar fra informasjon blir laget til den blir levert",
     alt: [
@@ -363,6 +427,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Hvilken komponent i en stasjonær datamaskin mister data dersom strømmen forsvinner?",
     svar: "RAM",
@@ -370,6 +435,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er de tre behovene i CIA-triaden?",
     svar: "Konfidensialitet, Integritet, Tilgjengelighet",
     alt: [
@@ -380,6 +446,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva mener vi med konfidensialitet?",
     svar: "Informasjon er beskyttet slik at kun autoriserte systemer og personell før tilgang",
     alt: [
@@ -390,6 +457,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva mener vi med integritet?",
     svar: "Informasjonen er komplett og ikke korrupt. Den er ikke pøvirket av et uautorisert eksternt parti/system eller støy i systemet",
     alt: [
@@ -400,6 +468,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva mener vi med tilgjengelighet?",
     svar: "Informasjonen er tilgjengelig for autoriserte systemer og personell uten mye innblanding eller hindring i et passende format",
     alt: [
@@ -410,6 +479,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hvilken er IKKE en black hat hacker?",
     svar: "Børge spør NTNU om han kan sjekke deres datasystemer for feil, og finner en møte å øpne alle dører på campus. Han sier ifra til NTNU IT.",
     alt: [
@@ -420,6 +490,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er aksene i McCumbers kube?",
     svar: "Sikkerhetsmål, Datatilstander, Mottiltak",
     alt: [
@@ -430,6 +501,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er en sårbarhet i et IKT-system?",
     svar: "En svakhet som muliggjør at sikkerheten i et IKT-system kan bli brutt",
     alt: [
@@ -440,6 +512,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal:
       "Hva kan vi bruke til å vurdere alvorlighetsgraden til en sårbarhet?",
     svar: "Common Vulnerability Scoring System (CVSS)",
@@ -451,6 +524,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er buffer overflow?",
     svar: "En type angrep hvor man skriver mer data enn er plass til i bufferets minne, slik at det overskriver noe annet",
     alt: [
@@ -461,6 +535,7 @@ let questions = [
   },
 
   {
+    type: "vanlig",
     sporsmal: "Hva er IKKE en god møte å redusere sårbarhet i et system?",
     svar: "Redusere konsekvensene av at sårbarhet utnyttes ved å holde hvordan systemer fungerer hemmelig (Security through obscurity)",
     alt: [
@@ -501,6 +576,15 @@ function displayQuestion() {
     0,
     questions[current_index_questions].svar
   );
+
+  if (questions[current_index_questions].type == "forstoelse") {
+    file =
+      "assets/forstoelse" + questions[current_index_questions].index + ".png";
+    document.getElementById("image").innerHTML =
+      "<img src=" + file + " alt='image' />";
+  } else {
+    document.getElementById("image").innerHTML = "";
+  }
 
   for (var i = 0; i < 4; i++) {
     document.getElementById("answer" + i).innerText = current_answeres[i];
