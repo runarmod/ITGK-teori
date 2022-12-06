@@ -566,5 +566,5 @@ function shuffle(array) {
   return array;
 }
 
-// questions = shuffle(questions);
+questions = shuffle(questions);
 displayQuestion();
