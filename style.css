@@ -20,6 +20,11 @@ button {
   cursor: pointer;
 }
 
+.disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
 .answers {
   background-color: #4caf50;
   width: 100%;
@@ -32,17 +37,24 @@ button {
 p {
   display: block;
   font-size: 1.5em;
-  visibility: hidden;
   order: 2;
-  flex-basis: 10%;
+  flex-basis: 20%;
+  padding: 0;
 }
 
 #next {
-  order: 1;
-  flex-basis: 90%;
+  order: 3;
 }
 
-#next:hover {
+#prev {
+  order: 1;
+}
+
+.navigate {
+  flex-basis: 40%;
+}
+
+.navigate:hover {
   background-color: #1a1a1a;
 }
 

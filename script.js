@@ -1,6 +1,6 @@
-let currentQuestion = 0;
-let correct = 0;
-let current_questions;
+let current_index_questions = 0;
+let correct_index = 0;
+let current_answeres;
 let answered = false;
 let total_answered = 0;
 let total_correct = 0;
@@ -469,57 +469,74 @@ let questions = [
 function checkAnswer(answer) {
   if (!answered) {
     total_answered += 1;
-    if (answer == correct) {
-      document.getElementById("answer" + correct).style.backgroundColor =
+    if (answer == correct_index) {
+      document.getElementById("answer" + correct_index).style.backgroundColor =
         "green";
       total_correct += 1;
     } else {
-      document.getElementById("answer" + correct).style.backgroundColor =
+      document.getElementById("answer" + correct_index).style.backgroundColor =
         "green";
       document.getElementById("answer" + answer).style.backgroundColor = "red";
     }
   }
   answered = true;
-  if (total_answered > 0) {
-    document.getElementById("stats").style.visibility = "visible";
-    document.getElementById("stats").innerText =
-      total_correct + "/" + total_answered;
-    // document.getElementById("percentage").innerText = Math.round((total_correct / total_answered) * 100);
-  }
+  document.getElementById("stats").innerText =
+    total_correct + "/" + total_answered;
 }
 
 function displayQuestion() {
-  correct = Math.floor(Math.random() * 4);
+  correct_index = Math.floor(Math.random() * 4);
   document.getElementById("question").innerText =
-    questions[currentQuestion].sporsmal;
-  current_questions = [];
-  current_questions = questions[currentQuestion].alt;
-  current_questions.splice(correct, 0, questions[currentQuestion].svar);
+    questions[current_index_questions].sporsmal;
+  current_answeres = [];
+  current_answeres = [...questions[current_index_questions].alt];
+  current_answeres.splice(
+    correct_index,
+    0,
+    questions[current_index_questions].svar
+  );
 
-  for (var i = 0; i < current_questions.length; i++) {
-    document.getElementById("answer" + i).innerText = current_questions[i];
+  for (var i = 0; i < 4; i++) {
+    document.getElementById("answer" + i).innerText = current_answeres[i];
+  }
+}
+
+function lock_buttons() {
+  if (current_index_questions == 0) {
+    document.getElementById("prev").classList.add("disabled");
+  } else {
+    document.getElementById("prev").classList.remove("disabled");
+  }
+  if (current_index_questions == questions.length - 1) {
+    document.getElementById("next").classList.add("disabled");
+  } else {
+    document.getElementById("next").classList.remove("disabled");
   }
 }
 
 function reset() {
-  for (var i = 0; i < current_questions.length; i++) {
+  for (var i = 0; i < 4; i++) {
     document.getElementById("answer" + i).style.backgroundColor = "#4CAF50";
   }
   answered = false;
+  lock_buttons();
   displayQuestion();
 }
 
 function nextQuestion() {
-  currentQuestion++;
+  if (current_index_questions == questions.length - 1) {
+    return;
+  }
+  current_index_questions++;
   reset();
 }
 
-// function previousQuestion() {
-//   if (currentQuestion == 0) {
-//     return;
-//   }
-//   currentQuestion--;
-//   reset();
-// }
+function previousQuestion() {
+  if (current_index_questions == 0) {
+    return;
+  }
+  current_index_questions--;
+  reset();
+}
 
 displayQuestion();
