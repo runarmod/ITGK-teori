@@ -38,7 +38,7 @@ p {
   display: block;
   font-size: 1.5em;
   order: 2;
-  flex-basis: 20%;
+  flex-basis: 25%;
   padding: 0;
 }
 
@@ -62,4 +62,8 @@ p {
   display: inline-flex;
   flex-direction: row;
   width: 100%;
+}
+
+img {
+  height: 400px;
 }
