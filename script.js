@@ -2,6 +2,8 @@ let currentQuestion = 0;
 let correct = 0;
 let current_questions;
 let answered = false;
+let total_answered = 0;
+let total_correct = 0;
 
 let questions = [
   {
@@ -466,9 +468,11 @@ let questions = [
 
 function checkAnswer(answer) {
   if (!answered) {
+    total_answered += 1;
     if (answer == correct) {
       document.getElementById("answer" + correct).style.backgroundColor =
         "green";
+      total_correct += 1;
     } else {
       document.getElementById("answer" + correct).style.backgroundColor =
         "green";
@@ -476,6 +480,12 @@ function checkAnswer(answer) {
     }
   }
   answered = true;
+  if (total_answered > 0) {
+    document.getElementById("stats").style.visibility = "visible";
+    document.getElementById("stats").innerText =
+      total_correct + "/" + total_answered;
+    // document.getElementById("percentage").innerText = Math.round((total_correct / total_answered) * 100);
+  }
 }
 
 function displayQuestion() {
