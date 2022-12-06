@@ -58,11 +58,11 @@ let questions = [
 
   {
     sporsmal: "Hva sier Moores lov?",
-    svar: "Loven sier at antall transistorer i en integrert krets dobles hvert andre ør.",
+    svar: "Loven sier at antall transistorer i en integrert krets dobles hvert andre år.",
     alt: [
       "Loven sier at klokkehastigheten øker proporsjonalt med antall programtellere.",
       "Loven sier at samplingsfrekvensen må være minst dobbelt så rask som den raskeste frekvensen",
-      "Loven postulerer at: Ting vil gø galt uavhengig av av situasjon gitt muligheten",
+      "Loven postulerer at: Ting vil gå galt uavhengig av av situasjon gitt muligheten",
     ],
   },
 
