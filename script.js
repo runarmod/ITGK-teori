@@ -6,6 +6,11 @@ let total_answered = 0;
 let total_correct = 0;
 
 let questions = [
+  //   {
+  //     sporsmal: "Hva vil printes her?",
+  //     svar: "3",
+  //     alt: ["1", "2", "4"],
+  //   },
   {
     sporsmal: "Hva er Alan Turing kjent for?",
     svar: "Han utformet det matematiske grunnlaget for dagens datamaskiner.",
@@ -490,6 +495,7 @@ function displayQuestion() {
     questions[current_index_questions].sporsmal;
   current_answeres = [];
   current_answeres = [...questions[current_index_questions].alt];
+  current_answeres = shuffle(current_answeres);
   current_answeres.splice(
     correct_index,
     0,
@@ -560,5 +566,5 @@ function shuffle(array) {
   return array;
 }
 
-questions = shuffle(questions)
+// questions = shuffle(questions);
 displayQuestion();
