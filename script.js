@@ -13,6 +13,7 @@ let questions = [
     svar: "3",
     alt: ["1", "2", "4"],
   },
+
   {
     type: "forstoelse",
     index: 2,
@@ -20,6 +21,7 @@ let questions = [
     svar: "76",
     alt: ["100", "-24", "124"],
   },
+
   {
     type: "forstoelse",
     index: 3,
@@ -27,6 +29,7 @@ let questions = [
     svar: "[-1, 0, 5]",
     alt: ["[0, 0, 5]", "[1, 1, 5]", "[2, 4, 5]"],
   },
+
   {
     type: "forstoelse",
     index: 4,
@@ -162,8 +165,8 @@ let questions = [
   {
     type: "vanlig",
     sporsmal: "Hva er 183 (titallssystemet) i binær?",
-    svar: "10101111",
-    alt: ["10110111", "110110111", "11010111"],
+    svar: "10110111",
+    alt: ["10101111", "110110111", "11010111"],
   },
 
   {
@@ -293,7 +296,6 @@ let questions = [
   {
     type: "vanlig",
     sporsmal: "Hva er riktig om Nyquist-regelen for sampling?",
-
     svar: "Nyquist-regelen sier at samplingsfrekvensen må være minst dobbelt så rask som den raskeste frekvensen. Ettersom menneskelige ører kan høre lyder opp til ca. 20 000Hz, vil samplingsfrekvens på 40 000Hz oppfylle Nyquists regel for digitale lydopptak.",
     alt: [
       "Nyquist-regelen sier at samplingsfrekvensen må være minst halvparten av den raskeste frekvensen. Ettersom menneskelige ører kan høre lyder opp til ca. 20 000Hz, vil samplingsfrekvens på 10 000Hz oppfylle Nyquists regel for digital lydopptak.",
