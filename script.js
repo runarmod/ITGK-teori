@@ -127,7 +127,7 @@ let questions = [
 
   {
     type: "vanlig",
-    sporsmal: "Hva stør CPU for?",
+    sporsmal: "Hva står CPU for?",
     svar: "Central Processing Unit",
     alt: ["Central Power Unit", "Cooling Power Unit", "Core Processing Unitr"],
   },
@@ -220,7 +220,7 @@ let questions = [
     type: "vanlig",
     sporsmal: "Binær tilstanden 0 kan også representere",
     svar: "Ikke flyt av strøm",
-    alt: ["Flyt av strøm", "False", "True"],
+    alt: ["Flyt av strøm", "Bokstaven \"a\"", "True"],
   },
 
   {
@@ -396,7 +396,7 @@ let questions = [
 
   {
     type: "vanlig",
-    sporsmal: "Gjør om det binøre flyttallet 1101.1011 til desimaltall",
+    sporsmal: "Gjør om det binære flyttallet 1101.1011 til desimaltall",
     svar: "13.11",
     alt: ["13.6875", "9.2022", "13.8525"],
   },
@@ -406,18 +406,18 @@ let questions = [
     sporsmal: "Hva er koding (encoding) av video?",
     svar: "Transformasjon av video slik at den kan deles og spilles av",
     alt: [
-      "Sikre at ingen før tilgang til video",
+      "Sikre at ingen får tilgang til video",
       "Gjøre om video til ulike format som JPG, PNG og mp3",
-      "øke størrelsen på videodata ved hjelp av matematikk",
+      "Øke størrelsen på videodata ved hjelp av matematikk",
     ],
   },
 
   {
     type: "vanlig",
     sporsmal:
-      "Et bilde 10 x 10 tommer bilde er skannet til 326 piksler per tomme.Hver piksel er representert ved en RGB-verdi. Hvor stor lagringsplass krever dette bildet?",
-    svar: "4.00 MB",
-    alt: ["31.9 MB", "1.32 MB", "10.6 MB"],
+      "Et bilde 10 x 10 tommer bilde er skannet til 326 piksler per tomme. Hver piksel er representert ved en RGB-verdi. Hvor stor lagringsplass krever dette bildet?",
+    svar: "31.9 MB",
+    alt: ["4.00 MB", "1.32 MB", "10.6 MB"],
   },
 
   {
@@ -445,12 +445,12 @@ let questions = [
   {
     type: "vanlig",
     sporsmal:
-      "Hvorfor er det behov for bildekomprimering? (Kan være flere riktige)",
-    svar: "Krymper fysisk bits i minnet (RAM), slik at det blir plass til mer",
+      "Hva er feil om bildekomprimering?",
+    svar: "Øker bildekvaliteten",
     alt: [
-      "Gjør det rasker å overføre bilder",
+      "Gjør det raskere å overføre bilder",
       "Reduserer lagringsplass for et bilde",
-      "øker bildekvaliteten",
+      "Krymper fysisk bits i minnet (RAM), slik at det blir plass til mer",
     ],
   },
 
@@ -481,17 +481,17 @@ let questions = [
     alt: [
       "... kan nesten gjennskape opprinnelig data",
       "... gir tap av opprinnelig data",
-      "... kan 100% gjennskape opprinnelig data",
+      "... kan 95% gjennskape opprinnelig data",
     ],
   },
 
   {
     type: "vanlig",
-    sporsmal: "Hva er sant?",
-    svar: "Forsinkelse (latency) er tiden det tar fra informasjon blir laget til den blir levert",
+    sporsmal: "Hva er IKKE sant?",
+    svar: "Grunntallet i heksadesimalrepresentasjon er 14",
     alt: [
       "Hvor mye data som overføres per tidsenhet (bits/sek) kalles båndbredde (bandwidth)",
-      "Grunntallet i heksadesimalrepresentasjon er 14",
+      "Forsinkelse (latency) er tiden det tar fra informasjon blir laget til den blir levert",
       "FPS er hvor mange bilder som vises per sekund i en video",
     ],
   },
@@ -518,7 +518,7 @@ let questions = [
   {
     type: "vanlig",
     sporsmal: "Hva mener vi med konfidensialitet?",
-    svar: "Informasjon er beskyttet slik at kun autoriserte systemer og personell før tilgang",
+    svar: "Informasjon er beskyttet slik at kun autoriserte systemer og personell får tilgang",
     alt: [
       "Informasjonen er tilgjengelig for autoriserte systemer og personell uten mye innblanding eller hindring i et passende format",
       "Informasjonen er ikke sårbar",
@@ -533,7 +533,7 @@ let questions = [
     alt: [
       "Integritet betyr selvstendighet. Når data har integritet betyr det at det inneholder all informasjon vi trenger for å utføre en oppgave",
       "Informasjonen er korrekt og ikke påvirket av politikk eller andres agenda",
-      "Informasjon er beskyttet slik at kun autoriserte systemer og personell før tilgang",
+      "Informasjon er beskyttet slik at kun autoriserte systemer og personell får tilgang",
     ],
   },
 
@@ -551,10 +551,10 @@ let questions = [
   {
     type: "vanlig",
     sporsmal: "Hvilken er IKKE en black hat hacker?",
-    svar: "Børge spør NTNU om han kan sjekke deres datasystemer for feil, og finner en møte å øpne alle dører på campus. Han sier ifra til NTNU IT.",
+    svar: "Børge spør NTNU om han kan sjekke deres datasystemer for feil, og finner en måte å åpne alle dører på campus. Han sier ifra til NTNU IT.",
     alt: [
-      "Eirik oppdager en feil i NTNU sine datasystemer som lar ham gi seg selv A i alle fag, og oppnør tidenes beste snitt",
-      "Køre Johnny hacker banken sin og gir seg selv masse penger",
+      "Eirik oppdager en feil i NTNU sine datasystemer som lar ham gi seg selv A i alle fag, og oppnår tidenes beste snitt",
+      "Kåre Johnny hacker banken sin og gir seg selv masse penger",
       "Martin har lagt inn virus i øvingene i ITGK. Han bruker dette til å mine cryptocurrency på datamaskinene til studentene",
     ],
   },
@@ -575,7 +575,7 @@ let questions = [
     sporsmal: "Hva er en sårbarhet i et IKT-system?",
     svar: "En svakhet som muliggjør at sikkerheten i et IKT-system kan bli brutt",
     alt: [
-      "Sårbarhet skjer nør det kommer rød tekst i terminalen",
+      "Sårbarhet skjer når det kommer rød tekst i terminalen",
       "Sårbarhet handler om hvordan påkjenninger og stress vil kunne gi konsekvenser",
       "En feil i systemet som gjør at det ikke fungerer riktig",
     ],
@@ -606,7 +606,7 @@ let questions = [
 
   {
     type: "vanlig",
-    sporsmal: "Hva er IKKE en god møte å redusere sårbarhet i et system?",
+    sporsmal: "Hva er IKKE en god måte å redusere sårbarhet i et system?",
     svar: "Redusere konsekvensene av at sårbarhet utnyttes ved å holde hvordan systemer fungerer hemmelig (Security through obscurity)",
     alt: [
       "Unngå at sårbarheter blir utnyttet ved å redusere angrepsflaten",
