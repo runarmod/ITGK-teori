@@ -7,6 +7,74 @@ let total_correct = 0;
 
 let questions = [
   {
+    type: "vanlig",
+    sporsmal: "Hva gjør 'git add main.py'?",
+    svar: "Legger til main.py i staging area.",
+    alt: [
+      "Legger til main.py i working directory.",
+      "Legger til main.py i remote repository.",
+      "Lager en ny fil med navn main.py.",
+    ],
+  },
+
+  {
+    type: "vanlig",
+    sporsmal: "Hva er git?",
+    svar: "Et versjonskontroll system.",
+    alt: [
+      "Et programmeringsspråk.",
+      "Et kallenavn for gitlab.",
+      "En komponent i en datamaskin som sørger for at data på en harddisk ikke blir korrupt.",
+    ],
+  },
+
+  {
+    type: "vanlig",
+    sporsmal: "Hvilken kommando brukes for å se nåværende endringer i et repo?",
+    svar: "git status",
+    alt: ["git config status", "--status", "git get status"],
+  },
+
+  {
+    type: "vanlig",
+    sporsmal: "Hvordan starter man et helt nytt git repository?",
+    svar: "git init",
+    alt: ["git start", "git clone [url]", "git begin"],
+  },
+
+  {
+    type: "vanlig",
+    sporsmal:
+      "Hvilken kommando brukes for å commite gjorte endringer (med melding)?",
+    svar: 'git commit -m "[melding]"',
+    alt: [
+      'git commit "[melding]"',
+      'git commit message "[melding]"',
+      'git push "[melding]"',
+    ],
+  },
+
+  {
+    type: "vanlig",
+    sporsmal:
+      "Hvilken kommando brukes for å bytte til en eksisterende branch 'main'?",
+    svar: "git checkout main",
+    alt: ["git change main", "git main", "git branch main"],
+  },
+
+  {
+    type: "vanlig",
+    sporsmal:
+      "Hvilken kommando brukes for å lagre en lokal kopi av repoet https://github.com/example?",
+    svar: "git clone https://github.com/example.git",
+    alt: [
+      "git pull https://github.com/example.git",
+      "git init https://github.com/example.git",
+      "git get https://github.com/example.git",
+    ],
+  },
+
+  {
     type: "forstoelse",
     index: 1,
     sporsmal: "Hva vil printes her?",
