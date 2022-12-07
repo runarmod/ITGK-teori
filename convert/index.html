@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Konverter</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <a href="../index.html">Tilbake <-</a>
+      </header>
+      <main>
+        <div id="grid">
+          <select class="grid-item" id="baseFrom" onchange="generateRandom()">
+            <option id="b" value="2">Binary</option>
+            <option id="o" value="8">Octal</option>
+            <option id="d" value="10">Decimal</option>
+            <option id="h" value="16">Hexadecimal</option>
+            <!-- <optin id="other" value="other">Other</option> -->
+          </select>
+          <select class="grid-item" id="baseTo" onchange="generateRandom()">
+            <option id="b" value="2">Binary</option>
+            <option id="o" value="8">Octal</option>
+            <option id="d" value="10">Decimal</option>
+            <option id="h" value="16">Hexadecimal</option>
+            <!-- <optin id="other" value="other">Other</option> -->
+          </select>
+          <input disabled class="grid-item" type="text" id="input" />
+          <div class="grid-item">
+            <input type="text" id="output" placeholder="Ditt svar" />
+            <button onclick="submit()">Submit</button>
+          </div>
+          <h2>
+            <span id="correct"></span>
+            <span id="wrong"></span>
+          </h2>
+        </div>
+        <div id="history">
+          <h2>History</h2>
+          <div id="history-content"></div>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>

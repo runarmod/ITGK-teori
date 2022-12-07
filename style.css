@@ -42,12 +42,12 @@ p {
   padding: 0;
 }
 
-#next {
-  order: 3;
-}
-
 #prev {
   order: 1;
+}
+
+#next {
+  order: 3;
 }
 
 .navigate {

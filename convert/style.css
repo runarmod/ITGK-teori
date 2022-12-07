@@ -1,0 +1,47 @@
+body {
+  text-align: center;
+}
+
+#wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+select {
+  background-color: #2c2c2c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input {
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+button {
+  background-color: #2c2c2c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 24px;
+}
