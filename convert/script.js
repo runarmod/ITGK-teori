@@ -37,16 +37,16 @@ function addToHistory(correct_wrong) {
     correct_wrong +
     "! " +
     question +
-    " in base " +
+    " i grunntall " +
     baseFrom +
-    " to base " +
+    " til grunntall " +
     baseTo +
-    " is " +
+    " er " +
     answer +
     ".";
   var child = document.createElement("p");
   child.innerText = response;
-  child.style.color = correct_wrong == "Correct" ? "green" : "red";
+  child.style.color = correct_wrong == "Riktig" ? "green" : "red";
   var container = document.getElementById("history-content");
   container.insertBefore(child, container.firstChild);
 }
@@ -54,8 +54,8 @@ function addToHistory(correct_wrong) {
 function correct() {
   document.getElementById("output").style.backgroundColor = "green";
   document.getElementById("output").style.color = "white";
-  document.getElementById("output").value = "Correct!";
-  addToHistory("Correct");
+  document.getElementById("output").value = "Riktig!";
+  addToHistory("Riktig");
   setTimeout(function () {
     document.getElementById("output").style.backgroundColor = "white";
     document.getElementById("output").style.color = "black";
@@ -67,8 +67,8 @@ function correct() {
 function wrong() {
   document.getElementById("output").style.backgroundColor = "red";
   document.getElementById("output").style.color = "white";
-  document.getElementById("output").value = "Wrong!";
-  addToHistory("Wrong");
+  document.getElementById("output").value = "Feil!";
+  addToHistory("Feil");
   setTimeout(function () {
     document.getElementById("output").style.backgroundColor = "white";
     document.getElementById("output").style.color = "black";
