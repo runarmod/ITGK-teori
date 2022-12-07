@@ -289,11 +289,11 @@ let questions = [
   {
     type: "vanlig",
     sporsmal:
-      "Hvordan representeres et flyt/desimaltall med 32 bit iht. IEEE 754 standarden?",
-    svar: "23 bit for signifikanten",
+      "Hva stemmer ikke for følgende?\nHvordan representeres et flyt/desimaltall med 32 bit iht. IEEE 754 standarden?",
+    svar: "1 bit for multiplikatoren",
     alt: [
       "1 bit for fortegn (+/-)",
-      "1 bit for multiplikatoren",
+      "23 bit for signifikanten",
       "8 bit for eksponenten",
     ],
   },
@@ -385,12 +385,12 @@ let questions = [
 
   {
     type: "vanlig",
-    sporsmal: "Hva er  sant om UNICODE?",
-    svar: "Etablert i 1992",
+    sporsmal: "Hva er IKKE sant om UNICODE?",
+    svar: "Mangler støtte for matematiske symboler og emojies",
     alt: [
-      "Mest brukte versjon bruker 16 bit",
+      "Etablert i 1992",
       "Støtte for alle bokstaver i alle språk",
-      "Mangler støtte for matematiske symboler og emojies",
+      "Mest brukte versjon bruker 16 bit",
     ],
   },
 
@@ -529,10 +529,10 @@ let questions = [
   {
     type: "vanlig",
     sporsmal: "Hva mener vi med integritet?",
-    svar: "Informasjonen er komplett og ikke korrupt. Den er ikke pøvirket av et uautorisert eksternt parti/system eller støy i systemet",
+    svar: "Informasjonen er komplett og ikke korrupt. Den er ikke påvirket av et uautorisert eksternt parti/system eller støy i systemet",
     alt: [
       "Integritet betyr selvstendighet. Når data har integritet betyr det at det inneholder all informasjon vi trenger for å utføre en oppgave",
-      "Informasjonen er korrekt og ikke pøvirket av politikk eller andres agenda",
+      "Informasjonen er korrekt og ikke påvirket av politikk eller andres agenda",
       "Informasjon er beskyttet slik at kun autoriserte systemer og personell før tilgang",
     ],
   },
